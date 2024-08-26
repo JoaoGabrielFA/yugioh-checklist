@@ -1,7 +1,55 @@
+@font-face {
+  font-family: yugiohFont;
+  src: url(../font/timeless/Timeless-Bold.ttf);
+}
+
 .home{
   display: flex;
+  flex-direction: column;
   justify-content: flex-start;
   flex-wrap: wrap;
   width: 100vw;
   height: 100vh;
+}
+
+.title{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 30%;
+  color: #FFF;
+  font-family: yugiohFont;
+}
+
+.mainTitle{
+  font-size: 4rem;
+  border-bottom: 4px solid #FFF;
+}
+
+.subTitle{
+  font-size: 3.2rem;
+}
+
+.inputBar{
+  width: 50%;
+  height: 2rem;
+  margin: auto;
+  border-radius: 10px;
+  text-align: center;
+}
+
+.inputBar:placeholder-shown{
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.latestSets{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  width: 80%;
+  margin: auto;
+  gap: 10px;
 }

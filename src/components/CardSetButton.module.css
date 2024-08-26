@@ -1,12 +1,65 @@
-.card{
+@font-face {
+  font-family: yugiohFont;
+  src: url(../font/timeless/Timeless-Bold.ttf);
+}
+
+.cardset{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  width: 250px;
+  height: 125px;
+  /* border: 1px solid #FFF; */
+  border-radius: 5px;
+}
+
+.cardset_image{
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  width: calc(25% - 12px);
-  height: 80px;
-  border: 1px solid black;
-  border-radius: 5px;
-  padding: 5px;
+  width: 100%;
+  height: 80%;
   cursor: pointer;
+  font-family: yugiohFont;
+  color: #fff;
+  text-decoration: none;
+  background-size: cover;
+}
+
+.cardset_name, .cardset_code, .cardset_percent_text{
+  text-shadow: 2px 0 #000, -2px 0 #000, 0 2px #000, 0 -2px #000,
+             1px 1px #000, -1px -1px #000, 1px -1px #000, -1px 1px #000;
+}
+
+.cardset_code{
+  font-size: 2rem;
+}
+
+.cardset_bar_container{
+  position: relative;
+  height: 20%;
+  width: 100%;
+  background-color: #41414189;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+  overflow: hidden;
+}
+
+.cardset_bar{
+  background-color: #095b03;
+  height: 100%;
+  transition: width 1s ease;
+}
+
+.cardset_percent_text{
+  display: block;
+  width: 100%;
+  margin-top: -22px;
+  text-align: center;
+  color: #fff;
+  font-family: yugiohFont;
 }
