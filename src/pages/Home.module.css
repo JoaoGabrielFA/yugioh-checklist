@@ -9,6 +9,7 @@
   justify-content: flex-start;
   flex-wrap: wrap;
   width: 100vw;
+  margin: auto;
   height: 100vh;
 }
 
@@ -32,24 +33,27 @@
   font-size: 3.2rem;
 }
 
-.inputBar{
-  width: 50%;
-  height: 2rem;
-  margin: auto;
-  border-radius: 10px;
-  text-align: center;
-}
-
-.inputBar:placeholder-shown{
-  text-transform: uppercase;
-  text-align: center;
-}
-
 .latestSets{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 80%;
+  margin: auto;
+  gap: 10px;
+}
+
+.latestSets_title{
+  color: #FFF;
+  text-shadow: 2px 0 #000, -2px 0 #000, 0 2px #000, 0 -2px #000,
+             1px 1px #000, -1px -1px #000, 1px -1px #000, -1px 1px #000;
+  font-family: yugiohFont;
+}
+
+.latestSets_cards{
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  width: 80%;
+  width: 100%;
   margin: auto;
   gap: 10px;
 }

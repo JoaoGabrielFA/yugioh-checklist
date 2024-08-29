@@ -7,8 +7,17 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  gap: 5px;
   font-family: yugiohFont;
   color: #FFF;
   text-shadow: 2px 0 #000, -2px 0 #000, 0 2px #000, 0 -2px #000,
              1px 1px #000, -1px -1px #000, 1px -1px #000, -1px 1px #000;
+}
+
+.card{
+  width: 400px;
+  padding: 10px;
+  background-color: #86868676;
+  border-radius: 10px;
+  /* border: 1px solid white; */
 }

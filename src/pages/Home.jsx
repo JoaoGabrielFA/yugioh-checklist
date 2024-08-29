@@ -2,17 +2,10 @@ import { useEffect, useState } from 'react';
 import { getCardSets } from '../database/api';
 import CardSetButton from '../components/CardSetButton';
 import styles from './Home.module.css';
-import { useNavigate } from 'react-router-dom';
+import SearchBar from '../components/SearchBar';
 
 function Home() {
   const [cardSetsList, setCardSetsList] = useState([]);
-
-  const navigate = useNavigate();
-
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    navigate('/set/' + e.target.elements.setCode.value);
-  };
 
   useEffect(() => {
     getCardSets().then((resp) => {
@@ -26,19 +19,14 @@ function Home() {
         <span className={styles.mainTitle}>Yu-Gi-Oh!</span>
         <span className={styles.subTitle}>CHECKLIST</span>
       </div>
-      {/* <form className={styles.inputBar} onSubmit={handleSubmit}>
-      <input
-        className={styles.input}
-        type="text"
-        name="setCode"
-        placeholder="Enter the set code"
-      />
-      <button className={styles.button} type="submit"></button>
-    </form> */}
+      <SearchBar />
       <div className={styles.latestSets}>
-        {cardSetsList.length > 0 && cardSetsList.map((element) => {
-          return <CardSetButton cardSet={element}></CardSetButton>
-        })}
+        <span className={styles.latestSets_title}>LATEST SETS</span>
+        <div className={styles.latestSets_cards}>
+          {cardSetsList.length > 0 && cardSetsList.map((element) => {
+            return <CardSetButton cardSet={element}></CardSetButton>
+          })}
+        </div>
       </div>
     </body>
   );

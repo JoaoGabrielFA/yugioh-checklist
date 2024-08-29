@@ -9,7 +9,7 @@
   align-items: center;
   justify-content: flex-start;
   width: 250px;
-  height: 125px;
+  height: 150px;
   /* border: 1px solid #FFF; */
   border-radius: 5px;
 }
@@ -34,7 +34,9 @@
   text-shadow: 2px 0 #000, -2px 0 #000, 0 2px #000, 0 -2px #000,
              1px 1px #000, -1px -1px #000, 1px -1px #000, -1px 1px #000;
 }
-
+.cardset_name{
+  text-align: center;
+}
 .cardset_code{
   font-size: 2rem;
 }

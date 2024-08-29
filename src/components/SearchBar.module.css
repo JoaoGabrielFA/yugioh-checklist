@@ -1,0 +1,42 @@
+@font-face {
+  font-family: yugiohFont;
+  src: url(../font/timeless/Timeless-Bold.ttf);
+}
+
+.searchBar{
+  position: relative;
+  display: flex;
+  width: 50%;
+  height: 2rem;
+  margin: auto;
+  border-radius: 10px;
+  text-align: center;
+  border: 2px solid #FFF;
+  overflow: hidden;
+}
+
+.input{
+  width: 90%;
+  padding: 0 5%;
+  color: #FFF;
+  background-color: rgba(0, 0, 0, 0.393);
+  border: none;
+  text-align: center;
+  font-family: yugiohFont;
+}
+
+.input::placeholder{
+  color: #FFF;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.button{
+  position: absolute;
+  right: 0; bottom: 0;
+  top: 0;
+  width: 5%;
+  border: none;
+  background-color: #FFF;
+  cursor: pointer;
+}

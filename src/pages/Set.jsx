@@ -15,7 +15,6 @@ function Set() {
   useEffect(() => {
     getAllCardsFromSet(set).then((resp) => {
       setCards(resp.data);
-      console.log(resp.data);
     })
   }, [set])
 
@@ -23,7 +22,7 @@ function Set() {
     <div className={styles.set}>
       {cards.length > 0 && cards.map((element) => {
         return (
-          <span>{findSet(element.card_sets)} - {element.name}</span>
+          <span className={styles.card}>{findSet(element.card_sets)} - {element.name}</span>
         )
       })}
     </div>

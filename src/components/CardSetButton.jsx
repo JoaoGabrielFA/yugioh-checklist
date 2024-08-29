@@ -39,7 +39,7 @@ function CardSetButton({ cardSet }) {
           style={{ width: `${percentage}%` }}
         >
         </div>
-          <span className={styles.cardset_percent_text}>{percentage > 100 ? 'COMPLETE' : obtainedCards + "/" + cardSet.num_of_cards}</span>
+          <span className={styles.cardset_percent_text}>{percentage >= 100 ? 'COMPLETE' : obtainedCards + "/" + cardSet.num_of_cards}</span>
       </div>
     </div>
   );

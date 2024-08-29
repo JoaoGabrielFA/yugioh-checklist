@@ -5,6 +5,7 @@ export const getCardSets = async () => {
     const data = await fetch(`${api_base + "cardsets.php"}`).then(resp => resp.json());
     const sortedData = data.sort((a, b) => new Date(b.tcg_date) - new Date(a.tcg_date));
     const datas = sortedData.slice(0, 4);
+    // console.log(datas);
     return datas;
   } catch (error) {
     console.log('ERROR: ' + error);
@@ -19,5 +20,20 @@ export const getAllCardsFromSet = async (cardSetName) => {
   } catch (error) {
     console.log(error)
     return [];
+  }
+}
+
+export const findCardSet = async (set) => {
+  try {
+    const data = await fetch(`${api_base + "cardsets.php"}`).then(resp => resp.json());
+    const datas = [];
+    data.forEach(element => {
+      if(element.set_name.toLowerCase().includes(set.toLowerCase()) || element.set_code.toLowerCase().includes(set.toLowerCase())){
+        datas.push(element);
+      } 
+    });
+    return datas;
+  } catch (error) {
+    console.log(error)
   }
 }
