@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import styles from './CardSetButton.module.css';
 
 function CardSetButton({ cardSet }) {
-  const obtainedCards = 0;
+  const obtainedCards = JSON.parse(localStorage.getItem('yugioh_checklist'))?.find(entry => entry.hasOwnProperty(cardSet.set_name))?.[cardSet.set_name].length || 0;
   const [backgroundImage, setBackgroundImage] = useState('');
 
   useEffect(() => {
